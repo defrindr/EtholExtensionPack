@@ -1,0 +1,24 @@
+{
+    "name": "Ethol Bypass",
+    "description": "Simple plugin to bypassing ethol",
+    "version": "0.1",
+    "manifest_version": 2,
+    "author": "Defri Indra Mahardika",
+    "incognito": "split",
+    "content_scripts": [
+      {
+          "matches": ["https://ethol.pens.ac.id/home"],
+          "js": ["/remove_popup_holiday.js"]
+      },
+      {
+          "matches": ["https://ethol.pens.ac.id/home"],
+          "js": ["/remove_popup_holiday.js"]
+      }
+    ],
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "permissions": [
+       "activeTab"
+     ]
+}
